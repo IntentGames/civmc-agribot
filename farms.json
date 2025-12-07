@@ -1,0 +1,42 @@
+{
+    "last_message_id": 1447088304984952974,
+    "status_message_id": 1445221431209361431,
+    "farms": [
+        {
+            "name": "Farm_1",
+            "coords": "(123, 64, -456)",
+            "total_output": "50 ci wheat",
+            "runtime": 60,
+            "regrow_time": 36,
+            "next_ready": null,
+            "status": "Ready to be farmed",
+            "layers": [
+                {
+                    "id": 1,
+                    "status": "Ready to be farmed",
+                    "next_ready": null
+                }
+            ],
+            "num_layers": null,
+            "layers_done": []
+        },
+        {
+            "name": "Surmadri Wheat Farm",
+            "coords": "34223",
+            "total_output": "5 cs wheat",
+            "runtime": 900,
+            "regrow_time": 7200,
+            "next_ready": null,
+            "status": "Ready to be farmed",
+            "layers": [
+                {
+                    "id": 1,
+                    "status": "Ready to be farmed",
+                    "next_ready": null
+                }
+            ],
+            "num_layers": null,
+            "layers_done": []
+        }
+    ]
+}
