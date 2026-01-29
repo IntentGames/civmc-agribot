@@ -1,4 +1,4 @@
-# main.py
+# main.py 
 import os
 import json
 import re
@@ -7,10 +7,10 @@ import logging
 from datetime import datetime, timedelta, timezone
 
 
-import discord
-from discord.ext import commands
-from discord import app_commands
-from dotenv import load_dotenv
+import discord 
+from discord.ext import commands 
+from discord import app_commands 
+from dotenv import load_dotenv 
 
 
 # -------------------------
@@ -90,7 +90,7 @@ def load_farms():
                 farm["next_ready"] = datetime.fromisoformat(farm["next_ready"])
             except Exception:
                 farm["next_ready"] = None
-        # runtime/regrow_time stored as seconds (or minutes/hours depending on older formats)
+        # runtime/regrow_time stored 
         if "runtime" in farm and isinstance(farm["runtime"], (int, float)):
             # runtime previously saved as seconds — convert to timedelta
             farm["runtime"] = timedelta(seconds=farm["runtime"])
@@ -130,33 +130,6 @@ def save_farms(data):
 # -------------------------
 data = load_farms()
 farms = data.get("farms", [])
-
-
-# If empty, populate sensible defaults (only for first-run convenience)
-if not farms:
-    farms = [
-        {
-            "name": "Farm_1",
-            "coords": "(123, 64, -456)",
-            "total_output": "50 ci wheat",
-            "runtime": timedelta(minutes=30),
-            "regrow_time": timedelta(hours=0.01),
-            "next_ready": None,
-            "status": STATUS_UNKNOWN
-        },
-        {
-            "name": "Surmadri Wheat Farm",
-            "coords": "(123, 64, -456)",
-            "total_output": "5 cs wheat",
-            "runtime": timedelta(minutes=15),
-            "regrow_time": timedelta(hours=2),
-            "next_ready": None,
-            "status": STATUS_UNKNOWN
-        }
-    ]
-    data["farms"] = farms
-    save_farms(data)
-
 
 # -------------------------
 # Scheduler / notification helpers
@@ -366,7 +339,7 @@ async def process_kira_message(message: discord.Message):
     # -------------------------
     # Handle start
     # -------------------------
-    if "being started" in status_text:
+    if "started" in status_text:
         farm["status"] = STATUS_FARMING
         farm["next_ready"] = None
         save_farms(data)
@@ -390,7 +363,7 @@ async def process_kira_message(message: discord.Message):
                     save_farms(data)
                     await update_farms_embed()
 
-                    # 🚨 schedule the actual ready ping
+                    # schedule the ready ping
                     schedule_task_for_farm(farm)
 
                     if bot_channel:
@@ -418,7 +391,7 @@ async def process_kira_message(message: discord.Message):
     # -------------------------
     # Handle finish
     # -------------------------
-    elif "has finished" in status_text:
+    elif "finished" in status_text:
         next_ready_dt = created_at + farm["regrow_time"]
         farm["next_ready"] = next_ready_dt
         farm["status"] = STATUS_FARMING
@@ -671,7 +644,7 @@ async def on_ready():
     if kira_channel:
         after_msg = discord.Object(id=data["last_message_id"]) if data.get("last_message_id") else None
         async for message in kira_channel.history(limit=200, after=after_msg, oldest_first=True):
-            if message.author.name.lower() == "intentgames":
+            if message.author.name.lower() == "shakira":
                 await process_kira_message(message)
 
 
@@ -703,7 +676,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
     # Process Kira messages only in configured Kira channel
-    if message.author.name.lower() == "intentgames" and message.channel.id == KIRA_FARMUPDATES_CHANNEL_ID:
+    if message.author.name.lower() == "shakira" and message.channel.id == KIRA_FARMUPDATES_CHANNEL_ID:
         await process_kira_message(message)
     await bot.process_commands(message)
 
@@ -712,6 +685,3 @@ async def on_message(message):
 # Run
 # -------------------------
 bot.run(TOKEN, log_handler=handler, log_level=logging.DEBUG)
-
-
-
