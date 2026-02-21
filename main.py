@@ -234,7 +234,7 @@ async def update_farms_embed():
 
 
     embed = discord.Embed(
-        title="CivMC Agriculture Farms",
+        title="IF Farm Statuses",
         description="Current status of all farms:",
         color=discord.Color.green()
     )
@@ -267,10 +267,10 @@ async def update_farms_embed():
         embed.add_field(
             name=farm["name"],
             value=(
-                f"**Coords:** {coords}\n"
-                f"**Total Output:** {output}\n"
-                f"**Runtime:** {runtime_minutes} minutes\n"
-                f"**Status:** {status_display}\n"
+#                f"**Coords:** {coords}\n"
+#                f"**Total Output:** {output}\n"
+#                f"**Runtime:** {runtime_minutes} minutes\n"
+                f"**Status:** {status_display}\n\n"
             ),
             inline=False
         )

@@ -1,33 +1,105 @@
 {
-    "last_message_id": 1466186086328959077,
+    "last_message_id": 1474577693889528061,
     "status_message_id": 1445221431209361431,
     "farms": [
-        {
-            "name": "Farm 1",
-            "coords": "(123, 64, -456)",
-            "total_output": "50 ci wheat",
-            "runtime": 60,
-            "regrow_time": 36,
-            "next_ready": null,
-            "status": "Ready to be farmed",
-            "layers": [
-                {
-                    "id": 1,
-                    "status": "Ready to be farmed",
-                    "next_ready": null
-                }
-            ],
-            "num_layers": null,
-            "layers_done": []
-        },
         {
             "name": "Glendalough Pumpkin",
             "coords": "-4748 71 7809",
             "total_output": "~1.5CS Pumpkin",
             "runtime": 900,
             "regrow_time": 57600,
+            "next_ready": "2026-02-21T17:18:53.535000+00:00",
+            "status": "Currently being farmed"
+        },
+        {
+            "name": "Victoria Potato",
+            "coords": "-3076 78 9116",
+            "total_output": "~5.4cs potatoes",
+            "runtime": 3600,
+            "regrow_time": 57600,
+            "next_ready": null,
+            "status": "Unknown"
+        },
+        {
+            "name": "Regensburg Spruce L1",
+            "coords": "-3890,81,8862",
+            "total_output": "48ci Spruce 8ci Saplings",
+            "runtime": 6000,
+            "regrow_time": 57600,
             "next_ready": null,
             "status": "Ready to be farmed"
+        },
+        {
+            "name": "Regensburg Spruce L2",
+            "coords": "-3890,91,8861",
+            "total_output": "48ci Spruce 8ci Saplings",
+            "runtime": 6000,
+            "regrow_time": 57600,
+            "next_ready": null,
+            "status": "Ready to be farmed"
+        },
+        {
+            "name": "Regensburg Spruce L3",
+            "coords": "-3890,101,8860",
+            "total_output": "48ci Spruce 8ci Saplings",
+            "runtime": 6000,
+            "regrow_time": 57600,
+            "next_ready": null,
+            "status": "Ready to be farmed"
+        },
+        {
+            "name": "Karydia Jungle",
+            "coords": "-8931, 107, 2381",
+            "total_output": "17 ci jungle logs & 8 ci jungle saplings",
+            "runtime": 3000,
+            "regrow_time": 43200,
+            "next_ready": "2026-02-21T11:53:21.210000+00:00",
+            "status": "Currently being farmed"
+        },
+        {
+            "name": "Glendalough Potatoes",
+            "coords": "-4992 71 7902",
+            "total_output": "~5CS Potato",
+            "runtime": 2700,
+            "regrow_time": 57600,
+            "next_ready": "2026-02-21T16:33:45.868000+00:00",
+            "status": "Currently being farmed"
+        },
+        {
+            "name": "Glendalough Sweet Berries",
+            "coords": "-4920 71 7825",
+            "total_output": "~3CS Sweet Berries",
+            "runtime": 2700,
+            "regrow_time": 99000,
+            "next_ready": "2026-02-21T12:25:18.552000+00:00",
+            "status": "Currently being farmed"
+        },
+        {
+            "name": "Glendalough Spruce",
+            "coords": "-4778 71 7789",
+            "total_output": "-",
+            "runtime": 2700,
+            "regrow_time": 43200,
+            "next_ready": null,
+            "status": "Ready to be farmed"
+        },
+        {
+            "name": "Glendalough Beetroot",
+            "coords": "-4924,151,7843",
+            "total_output": "1 CS Beetroot",
+            "runtime": 2700,
+            "regrow_time": 57600,
+            "next_ready": null,
+            "status": "Unknown"
+        },
+        {
+            "name": "Karydia Wheat",
+            "coords": "-9527,68,2419",
+            "total_output": "~2CS wheat",
+            "runtime": 2700,
+            "regrow_time": 115200,
+            "next_ready": "2026-02-22T09:42:53.585334+00:00",
+            "status": "Currently being farmed"
         }
     ]
 }
